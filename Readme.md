@@ -9,7 +9,7 @@ This module can be used to build language-specific client generators; it will ta
 
   - All types relevant to client applications
   - All usercommands, per modules
-  - All messageStream messages (by finding all occurences of `state.emit`)
+  - All messageStream messages (by finding all occurences of `state.emit` and `state.broadcast`)
 
 Generators using mage-parser
 ----------------------------
