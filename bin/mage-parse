@@ -1,0 +1,31 @@
+#!/usr/bin/env node
+
+const path = require('path')
+const prettyjson = require('prettyjson')
+
+const {
+    Parser
+} = require('../lib')
+
+const projectDir = process.argv[2]
+
+if (!projectDir) {
+    console.error('Usage:', path.basename(__filename), '/path/to/mage/project')
+    process.exit(1)
+}
+
+console.log('> Analyzing', projectDir)
+console.log('')
+
+const parser = new Parser(projectDir)
+
+parser.parse()
+parser.modules.forEach(function (module) {
+    const name = module.name
+    delete module.name
+
+    console.log('-- Module', name, '--')
+    console.log(prettyjson.render(module, null, 2))
+    console.log('-- /Module', name, '--')
+    console.log('')
+})

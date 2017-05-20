@@ -1,0 +1,36 @@
+{
+  "name": "hello",
+  "description": "",
+  "version": "0.0.1",
+  "repository": "",
+  "author": "mt",
+  "license": "Private",
+  "scripts": {
+    "help": "     echo 'Display help information (this screen)' &&   npm run",
+    "mage": "     echo 'Run the mage binary'  &&                     ts-mage",
+    "develop": "  echo 'Run MAGE in development mode' &&             ts-mage-console",
+    "start": "    echo 'Start MAGE as a daemon' &&                   ts-mage start",
+    "stop": "     echo 'Stop the MAGE daemon' &&                     ts-mage stop",
+    "restart": "  echo 'Restart the MAGE daemon' &&                  ts-mage restart",
+    "reload": "   echo 'Reload the MAGE daemon' &&                   ts-mage reload",
+    "status": "   echo 'Check the MAGE daemon status' &&             ts-mage status",
+    "show-config": "      echo 'Show the compiled MAGE configuration' &&                         ts-mage show-config",
+    "archivist-create": " echo 'Create archivist vaults (based on current configuration)' &&     ts-mage archivist-create",
+    "archivist-migrate": "echo 'Migrate archivist vaults (based on current configuration)' &&    ts-mage archivist-migrate",
+    "archivist-drop": "   echo 'Drop the archivist vaults (based on current configuration)' &&   ts-mage archivist-drop",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": "^4 || ^5 || ^6 || ^7"
+  },
+  "dependencies": {
+    "@types/node": "7.0.13",
+    "glob": "^7.1.1",
+    "mage": "/Users/mt/Sources/mage",
+    "mage-console": "file:///Users/mt/Sources/mage-console",
+    "ts-node": "3.0.2",
+    "ts-simple-ast": "git+https://github.com/dsherret/ts-simple-ast.git",
+    "ts-type-info": "^7.0.1",
+    "typescript": "2.2.2"
+  }
+}

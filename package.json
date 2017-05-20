@@ -1,0 +1,39 @@
+{
+  "name": "mage-client-generator",
+  "version": "0.0.1",
+  "description": "Client generator module for TypeScript MAGE projects, used to extract usercommands and messageStream messages",
+  "main": "./dist/index.js",
+  "scripts": {
+    "watch": "watch -d 0 'npm run build --silent' ./src",
+    "build": "echo 'building...' && tsc && echo 'done'",
+    "run": "npm run build --silent && ./bin/mage-parse",
+    "install-test": "cd test/fake-project && npm install",
+    "test": "npm run run ./test/fake-project"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mage/mage-client-generator.git"
+  },
+  "keywords": [
+    "mage",
+    "client",
+    "code",
+    "generator"
+  ],
+  "author": "Marc Trudel <mtrudel@wizcorp.jp>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mage/mage-client-generator/issues"
+  },
+  "homepage": "https://github.com/mage/mage-client-generator#readme",
+  "dependencies": {
+    "@types/node": "^7.0.18",
+    "glob": "^7.1.1",
+    "prettyjson": "^1.2.1",
+    "typescript": "^2.3.2"
+  },
+  "devDependencies": {
+    "git-message": "1.0.2",
+    "watch": "^1.0.2"
+  }
+}
